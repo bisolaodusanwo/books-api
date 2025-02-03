@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const bookRoutes = require("./src/routes/bookRoutes");
+const authRoutes = require("./src/routes/authRoutes");
 
 dotenv.config();
 
@@ -12,5 +13,6 @@ app.use(express.json());
 
 // Routes
 app.use("/api/books", bookRoutes);
+app.use("/api/auth", authRoutes);
 
 module.exports = app;
